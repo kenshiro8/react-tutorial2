@@ -1,3 +1,5 @@
+import randomValueFromArray from "./components/Random"
+
 export default function App() {
   const showStory = false;
   const xItem = "";
