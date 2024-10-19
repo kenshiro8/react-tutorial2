@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import randomValueFromArray from "./components/Random"
+import branchWeightUnit from "./components/Branch"
+import branchTemperatureUnit from "./components/Branch"
 
 export default function App() {
   const xItem = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
@@ -31,14 +33,23 @@ export default function App() {
     <>
       <div>
         <label htmlFor="customname">Enter custom name:</label>
-        <input type="text" placeholder="" value={tempCustomName} onChange={handleCustomName}/>
+        <input type="text" 
+        placeholder="" 
+        value={tempCustomName} 
+        onChange={handleCustomName}/>
       </div>
 
       <div>
         <label htmlFor="us">US</label>
-        <input type="radio" value="us" checked={ukus === "us"} onChange={() => setUkus("us")}/>
+        <input type="radio" 
+        value="us" 
+        checked={ukus === "us"}  
+        onChange={() => setUkus("us")}/>
         <label htmlFor="uk">UK</label>
-        <input type="radio" value="uk" checked={ukus === "uk"} onChange={() => setUkus("uk")}/>
+        <input type="radio" 
+        value="uk" 
+        checked={ukus === "uk"} 
+        onChange={() => setUkus("uk")}/>
       </div>
 
       <div>
@@ -47,10 +58,10 @@ export default function App() {
 
       {showStory && (
         <p>
-          It was 94 fahrenheit outside, so {xItem[xItem_num]} went for a walk. When they
+          It was 94 { branchTemperatureUnit(ukus) } outside, so {xItem[xItem_num]} went for a walk. When they
           got to {yItem[yItem_num]}, they stared in horror for a few moments, then {zItem[zItem_num]}.
           {" "}{customName ? customName : "Bob"} saw the whole thing, but was not surprised — {xItem[xItem_num]} weighs 300
-          pounds, and it was a hot day.
+          {branchWeightUnit(ukus) }, and it was a hot day.
         </p>
       )}
     </>
