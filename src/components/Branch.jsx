@@ -1,4 +1,4 @@
-export default function branchWeightUnit(Enlang) {
+export function branchWeightUnit(Enlang) {
   if(Enlang === "us") {
     return "pounds";
   } else {
@@ -6,7 +6,7 @@ export default function branchWeightUnit(Enlang) {
   }
 }
 
-export default function branchTemperatureUnit(Enlang) {
+export function branchTemperatureUnit(Enlang) {
   if(Enlang === "us") {
     return "fahrenheit";
   } else {
