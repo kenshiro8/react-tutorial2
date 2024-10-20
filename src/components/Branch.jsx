@@ -1,15 +1,15 @@
 export function branchWeightUnit(Enlang) {
   if(Enlang === "us") {
-    return "pounds";
+    return "300 pounds";
   } else {
-    return "stones";
+    return "21 stones";
   }
 }
 
 export function branchTemperatureUnit(Enlang) {
   if(Enlang === "us") {
-    return "fahrenheit";
+    return "94 fahrenheit";
   } else {
-    return "celsius";
+    return "34 celsius";
   }
 }
